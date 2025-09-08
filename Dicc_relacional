@@ -1,0 +1,532 @@
+Orden,Esquema,Nombre Tabla,Nombre Columna,Tipo De Dato,PosiblePK2,TipoRelacion,FK_Referenciada_A
+1,ADP_DTM_DIM,Actividades,SkIdActividad,bigint,True,PK,
+2,ADP_DTM_DIM,Actividades,SkIdEmpresa,smallint,False,FK,Empresa
+3,ADP_DTM_DIM,Actividades,Descripcion,varchar,False,Otra,
+4,ADP_DTM_DIM,Actividades,Orden,int,False,Otra,
+5,ADP_DTM_DIM,Bodega,SkIdBodega,bigint,True,PK,
+6,ADP_DTM_DIM,Bodega,SkIdEmpresa,smallint,False,FK,Empresa
+7,ADP_DTM_DIM,Bodega,CodigoBodega,int,False,Otra,
+8,ADP_DTM_DIM,Bodega,Descripcion,varchar,False,Otra,
+9,ADP_DTM_DIM,CapituloPresupuesto,SkIdCapitulo,bigint,True,PK,
+10,ADP_DTM_DIM,CapituloPresupuesto,SkIdEmpresa,smallint,False,FK,Empresa
+11,ADP_DTM_DIM,CapituloPresupuesto,Codigo Proyecto,int,False,Otra,
+12,ADP_DTM_DIM,CapituloPresupuesto,Capitulo Numero,varchar,False,Otra,
+13,ADP_DTM_DIM,CapituloPresupuesto,Capitulo Descripcion,varchar,False,Otra,
+14,ADP_DTM_DIM,CapituloPresupuesto,Tipo Costo,varchar,False,Otra,
+15,ADP_DTM_DIM,CapituloPresupuesto,Tipo Costo Orden,smallint,False,Otra,
+16,ADP_DTM_DIM,CapituloPresupuesto,Empresa,varchar,False,Otra,
+17,ADP_DTM_DIM,ControlClaseOrigen,SkIdClaseOrigen,smallint,True,PK,
+18,ADP_DTM_DIM,ControlClaseOrigen,Clase,char,False,Otra,
+19,ADP_DTM_DIM,ControlClaseOrigen,Clase Descripcion,varchar,False,Otra,
+20,ADP_DTM_DIM,ControlClaseOrigen,Origen,varchar,False,Otra,
+21,ADP_DTM_DIM,ControlClaseOrigen,Origen Descripcion,varchar,False,Otra,
+22,ADP_DTM_DIM,Empresa,SkIdEmpresa,smallint,True,PK,
+23,ADP_DTM_DIM,Empresa,NombreEmpresa,varchar,False,Otra,
+24,ADP_DTM_DIM,Empresa,Nit,varchar,False,Otra,
+25,ADP_DTM_DIM,Empresa,Direccion,varchar,False,Otra,
+26,ADP_DTM_DIM,Empresa,Ref_IdEmpresa,smallint,False,Otra,
+27,ADP_DTM_DIM,Empresa,Ref_BdConfServidor,smallint,False,Otra,
+28,ADP_DTM_DIM,EspecicficacionDePedidos,SkIdEmpresa,smallint,False,FK,Empresa
+29,ADP_DTM_DIM,EspecicficacionDePedidos,SkIdPedido,bigint,True,PK,
+30,ADP_DTM_DIM,EspecicficacionDePedidos,Codigo Orden De Compra,int,False,Otra,
+31,ADP_DTM_DIM,EspecicficacionDePedidos,Pedido Urgente,char,False,Otra,
+32,ADP_DTM_DIM,EspecicficacionDePedidos,Tipo Pedido,varchar,False,Otra,
+33,ADP_DTM_DIM,EspecificacionDeActas,SkIdEmpresa,smallint,False,FK,Empresa
+34,ADP_DTM_DIM,EspecificacionDeActas,SkIdEspecificacionActas,bigint,True,PK,
+35,ADP_DTM_DIM,EspecificacionDeActas,No Acta,int,False,Otra,
+36,ADP_DTM_DIM,EspecificacionDeActas,No Contrato,int,False,Otra,
+37,ADP_DTM_DIM,EspecificacionDeActas,No Factura,varchar,False,Otra,
+38,ADP_DTM_DIM,EspecificacionDeActas,Codigo de barras,varchar,False,Otra,
+39,ADP_DTM_DIM,EspecificacionDeContratos,SkIdEmpresa,smallint,False,FK,Empresa
+40,ADP_DTM_DIM,EspecificacionDeContratos,SkIdContrato,bigint,True,PK,
+41,ADP_DTM_DIM,EspecificacionDeContratos,No. Contrato,int,False,Otra,
+42,ADP_DTM_DIM,EspecificacionDeContratos,Descripcion,varchar,False,Otra,
+43,ADP_DTM_DIM,EspecificacionDeContratos,Formas de pago,varchar,False,Otra,
+44,ADP_DTM_DIM,EspecificacionDeContratos,Clase Contrato,varchar,False,Otra,
+45,ADP_DTM_DIM,EspecificacionDeContratos,Fecha de creacion,varchar,False,Otra,
+46,ADP_DTM_DIM,EspecificacionDeContratos,Usuario de creacion,varchar,False,Otra,
+47,ADP_DTM_DIM,EspecificacionDeContratos,Fecha Inicio,varchar,False,Otra,
+48,ADP_DTM_DIM,EspecificacionDeContratos,Fecha Fin,varchar,False,Otra,
+49,ADP_DTM_DIM,EspecificacionDeEntradasAlmacen,SkIdEmpresa,smallint,False,FK,Empresa
+50,ADP_DTM_DIM,EspecificacionDeEntradasAlmacen,SkIdEspecificacionEntradasAlmacen,bigint,True,PK,
+51,ADP_DTM_DIM,EspecificacionDeEntradasAlmacen,No Entrada,int,False,Otra,
+52,ADP_DTM_DIM,EspecificacionDeEntradasAlmacen,Remision,varchar,False,Otra,
+53,ADP_DTM_DIM,EspecificacionDeEntradasAlmacen,No Factura,varchar,False,Otra,
+54,ADP_DTM_DIM,EspecificacionDeEntradasAlmacen,Codigo de barras,varchar,False,Otra,
+55,ADP_DTM_DIM,EspecificacionEjecucionCliente,SkIdEmpresa,smallint,False,FK,Empresa
+56,ADP_DTM_DIM,EspecificacionEjecucionCliente,SkIdEspecificacionEjecucionCliente,bigint,True,PK,
+57,ADP_DTM_DIM,EspecificacionEjecucionCliente,NoActaCliente,int,False,Otra,
+58,ADP_DTM_DIM,EspecificacionEjecucionCliente,ContratoCliente,varchar,False,Otra,
+59,ADP_DTM_DIM,EstadoEnvioDocumento,SkIdEstadoEnvioDocumento,int,True,PK,
+60,ADP_DTM_DIM,EstadoEnvioDocumento,Descripcion,varchar,False,Otra,
+61,ADP_DTM_DIM,EstadoPorDocumento,SkIdEstadoPorDocumento,int,True,PK,
+62,ADP_DTM_DIM,EstadoPorDocumento,SkIdEmpresa,smallint,False,FK,Empresa
+63,ADP_DTM_DIM,EstadoPorDocumento,SkIdEstado,int,True,PK,
+64,ADP_DTM_DIM,EstadoPorDocumento,Descripcion Estado,varchar,False,Otra,
+65,ADP_DTM_DIM,EstadoPorDocumento,Tipo Documento,varchar,False,Otra,
+66,ADP_DTM_DIM,EstadoPorDocumento,Empresa,varchar,False,Otra,
+67,ADP_DTM_DIM,Fecha,SkIdFecha,int,True,PK,
+68,ADP_DTM_DIM,Fecha,Fecha,date,False,Otra,
+69,ADP_DTM_DIM,Fecha,Año,smallint,False,Otra,
+70,ADP_DTM_DIM,Fecha,Mes,tinyint,False,Otra,
+71,ADP_DTM_DIM,Fecha,Dia,tinyint,False,Otra,
+72,ADP_DTM_DIM,Fecha,DiaDelAño,smallint,False,Otra,
+73,ADP_DTM_DIM,Fecha,SemanaDelAño,tinyint,False,Otra,
+74,ADP_DTM_DIM,Fecha,Trimestre,tinyint,False,Otra,
+75,ADP_DTM_DIM,Fecha,Semestre,tinyint,False,Otra,
+76,ADP_DTM_DIM,Fecha,NombreMes,varchar,False,Otra,
+77,ADP_DTM_DIM,Fecha,NombreMesCorto,char,False,Otra,
+78,ADP_DTM_DIM,Fecha,NombreDia,varchar,False,Otra,
+79,ADP_DTM_DIM,Fecha,NombreDiaCorto,char,False,Otra,
+80,ADP_DTM_DIM,Fecha,MesAño,char,False,Otra,
+81,ADP_DTM_DIM,Insumo,SkIdInsumo,bigint,True,PK,
+82,ADP_DTM_DIM,Insumo,SkIdEmpresa,smallint,False,FK,Empresa
+83,ADP_DTM_DIM,Insumo,Empresa,nvarchar,False,Otra,
+84,ADP_DTM_DIM,Insumo,Codigo Insumo,varchar,False,Otra,
+85,ADP_DTM_DIM,Insumo,Insumo Descripcion,varchar,False,Otra,
+86,ADP_DTM_DIM,Insumo,Agrupacion,varchar,False,Otra,
+87,ADP_DTM_DIM,Insumo,Agrupacion Descripcion,varchar,False,Otra,
+88,ADP_DTM_DIM,Insumo,Tipo,char,False,Otra,
+89,ADP_DTM_DIM,Insumo,Tipo Descripcion,varchar,False,Otra,
+90,ADP_DTM_DIM,Insumo,Unidad,varchar,False,Otra,
+91,ADP_DTM_DIM,Insumo,Descripcion Unidad,varchar,False,Otra,
+92,ADP_DTM_DIM,Insumo,Estado,varchar,False,Otra,
+93,ADP_DTM_DIM,Insumo,Requiere Equipo,varchar,False,Otra,
+94,ADP_DTM_DIM,Insumo,Dias Reposicion,int,False,Otra,
+95,ADP_DTM_DIM,Insumo,SubAnalisis,char,False,Otra,
+96,ADP_DTM_DIM,Insumo,Devolutivo,char,False,Otra,
+97,ADP_DTM_DIM,Insumo,Stock Maximo,int,False,Otra,
+98,ADP_DTM_DIM,Insumo,Stock Minimo,int,False,Otra,
+99,ADP_DTM_DIM,Insumo,Valor Unitario,money,False,Otra,
+100,ADP_DTM_DIM,Insumo,Porcentaje IVA,float,False,Otra,
+101,ADP_DTM_DIM,Insumo,Valor Neto,money,False,Otra,
+102,ADP_DTM_DIM,Insumo,Fecha Creacion,varchar,False,Otra,
+103,ADP_DTM_DIM,Insumo,Fecha Modificacion,varchar,False,Otra,
+104,ADP_DTM_DIM,Insumo,Codigo Insumo Id,bigint,False,Otra,
+105,ADP_DTM_DIM,Items,SkIdItems,bigint,True,PK,
+106,ADP_DTM_DIM,Items,SkIdEmpresa,smallint,False,FK,Empresa
+107,ADP_DTM_DIM,Items,SkIdAPU,bigint,False,Otra,
+108,ADP_DTM_DIM,Items,SkIdNivel,int,False,FK,NivelesPresupuesto
+109,ADP_DTM_DIM,Items,Empresa,varchar,False,Otra,
+110,ADP_DTM_DIM,Items,Item No,varchar,False,Otra,
+111,ADP_DTM_DIM,Items,SubCapitulo,varchar,False,Otra,
+112,ADP_DTM_DIM,Items,Item Descripcion,varchar,False,Otra,
+113,ADP_DTM_DIM,Items,Cantidad,numeric,False,Otra,
+114,ADP_DTM_DIM,Items,Valor Sin IVA,numeric,False,Otra,
+115,ADP_DTM_DIM,Items,Precio Venta,money,False,Otra,
+116,ADP_DTM_DIM,Items,Codigo Cliente,varchar,False,Otra,
+117,ADP_DTM_DIM,Items,Cantidad Proyectada,numeric,False,Otra,
+118,ADP_DTM_DIM,Items,Unidad Medida,varchar,False,Otra,
+119,ADP_DTM_DIM,Items,Item estado,varchar,False,Otra,
+120,ADP_DTM_DIM,Items,Metro cuadrado,money,False,Otra,
+121,ADP_DTM_DIM,Items,Aplica En Contratos,varchar,False,Otra,
+122,ADP_DTM_DIM,Items,Aplica En Almacen,varchar,False,Otra,
+123,ADP_DTM_DIM,Items,Bloqueo De Contratos Por Cantidad,varchar,False,Otra,
+124,ADP_DTM_DIM,Items,Bloqueo De Contratos Por Valor,varchar,False,Otra,
+125,ADP_DTM_DIM,Items,Bloqueo De Salidas Por Cantidad,varchar,False,Otra,
+126,ADP_DTM_DIM,Items,Bloqueo De Salidas Por Valor,varchar,False,Otra,
+127,ADP_DTM_DIM,Items,Clase Item,varchar,False,Otra,
+128,ADP_DTM_DIM,NivelesPresupuesto,SkIdNivel,int,True,PK,
+129,ADP_DTM_DIM,NivelesPresupuesto,SkIdEmpresa,smallint,False,FK,Empresa
+130,ADP_DTM_DIM,NivelesPresupuesto,Codigo Proyecto,int,False,Otra,
+131,ADP_DTM_DIM,NivelesPresupuesto,Id Nivel,varchar,False,Otra,
+132,ADP_DTM_DIM,NivelesPresupuesto,Descripcion Nivel,varchar,False,Otra,
+133,ADP_DTM_DIM,NivelesPresupuesto,Nivel Auxiliar,tinyint,False,Otra,
+134,ADP_DTM_DIM,NivelesPresupuesto,Orden,int,False,Otra,
+135,ADP_DTM_DIM,NivelesPresupuesto,Empresa,varchar,False,Otra,
+136,ADP_DTM_DIM,OrigenDelDocumento,SkIdOrigenDelDocumento,int,True,PK,
+137,ADP_DTM_DIM,OrigenDelDocumento,Descripcion,varchar,False,Otra,
+138,ADP_DTM_DIM,Proyecto,SkIdProyecto,int,True,PK,
+139,ADP_DTM_DIM,Proyecto,Codigo Proyecto,int,False,Otra,
+140,ADP_DTM_DIM,Proyecto,Nombre Proyecto,varchar,False,Otra,
+141,ADP_DTM_DIM,Proyecto,Clase Proyecto,varchar,False,Otra,
+142,ADP_DTM_DIM,Proyecto,Tipo,varchar,False,Otra,
+143,ADP_DTM_DIM,Proyecto,Estado,varchar,False,Otra,
+144,ADP_DTM_DIM,Proyecto,Presupuesto Fijo,char,False,Otra,
+145,ADP_DTM_DIM,Proyecto,Propietario,varchar,False,Otra,
+146,ADP_DTM_DIM,Proyecto,Sucursal,smallint,False,Otra,
+147,ADP_DTM_DIM,Proyecto,Sucursal Nombre,varchar,False,Otra,
+148,ADP_DTM_DIM,Proyecto,MacroProyecto,varchar,False,Otra,
+149,ADP_DTM_DIM,Proyecto,MacroProyecto Descripcion,varchar,False,Otra,
+150,ADP_DTM_DIM,Proyecto,Centro Costo,varchar,False,Otra,
+151,ADP_DTM_DIM,Proyecto,Centro Costo Descripcion,varchar,False,Otra,
+152,ADP_DTM_DIM,Proyecto,VIS,char,False,Otra,
+153,ADP_DTM_DIM,Proyecto,Sucursal Administrativa,varchar,False,Otra,
+154,ADP_DTM_DIM,Proyecto,SkIdEmpresa,smallint,False,FK,Empresa
+155,ADP_DTM_DIM,Proyecto,Empresa,varchar,False,Otra,
+156,ADP_DTM_DIM,Proyecto,Fecha De Elaboracion,varchar,False,Otra,
+157,ADP_DTM_DIM,Proyecto,Fecha De Inicio,varchar,False,Otra,
+158,ADP_DTM_DIM,Proyecto,Fecha De Finalizacion,varchar,False,Otra,
+159,ADP_DTM_DIM,Proyecto,UnidadAConstruir,varchar,False,Otra,
+160,ADP_DTM_DIM,Proyecto,CantidadAConstruir,numeric,False,Otra,
+161,ADP_DTM_DIM,Proyecto,AreaAConstruir_M2,varchar,False,Otra,
+162,ADP_DTM_DIM,Proyecto,AreaConstruidaFinal_M2,float,False,Otra,
+163,ADP_DTM_DIM,Proyecto,AreaAVender_M2,varchar,False,Otra,
+164,ADP_DTM_DIM,Proyecto,Arealote_M2,varchar,False,Otra,
+165,ADP_DTM_DIM,Proyecto,CostoPreFactibilidad,numeric,False,Otra,
+166,ADP_DTM_DIM,Proyecto,Iniciales,varchar,False,Otra,
+167,ADP_DTM_DIM,Proyecto,Nocontrato,varchar,False,Otra,
+168,ADP_DTM_DIM,Proyecto,Cliente,varchar,False,Otra,
+169,ADP_DTM_DIM,Proyecto,Inversionista,varchar,False,Otra,
+170,ADP_DTM_DIM,Proyecto,Almacenista,varchar,False,Otra,
+171,ADP_DTM_DIM,Proyecto,PorcentajeAdministracion,smallmoney,False,Otra,
+172,ADP_DTM_DIM,Proyecto,PorcentajeImprevistos,smallmoney,False,Otra,
+173,ADP_DTM_DIM,Proyecto,PorcentajeUtilidad,smallmoney,False,Otra,
+174,ADP_DTM_DIM,Proyecto,IVA,smallmoney,False,Otra,
+175,ADP_DTM_DIM,Tercero,SkIdTercero,int,True,PK,
+176,ADP_DTM_DIM,Tercero,Nombre,nvarchar,False,Otra,
+177,ADP_DTM_DIM,Tercero,Nit,varchar,False,Otra,
+178,ADP_DTM_DIM,Tercero,Contacto,varchar,False,Otra,
+179,ADP_DTM_DIM,Tercero,Email,varchar,False,Otra,
+180,ADP_DTM_DIM,Tercero,Direccion,varchar,False,Otra,
+181,ADP_DTM_DIM,Tercero,Telefono,varchar,False,Otra,
+182,ADP_DTM_DIM,Tercero,Tipo,varchar,False,Otra,
+183,ADP_DTM_DIM,Tercero,Plazo de pago,int,False,Otra,
+184,ADP_DTM_DIM,Tercero,Ciudad,varchar,False,Otra,
+185,ADP_DTM_DIM,Tercero,CIIU Cod,varchar,False,Otra,
+186,ADP_DTM_DIM,Tercero,CIIU,varchar,False,Otra,
+187,ADP_DTM_DIM,Tercero,Estado,varchar,False,Otra,
+188,ADP_DTM_DIM,Tercero,Especialidad,varchar,False,Otra,
+189,ADP_DTM_DIM,Tercero,Categoria,varchar,False,Otra,
+190,ADP_DTM_DIM,Tercero,Grupo,varchar,False,Otra,
+191,ADP_DTM_DIM,Tercero,Calificacion,varchar,False,Otra,
+192,ADP_DTM_DIM,Tercero,Cargo,varchar,False,Otra,
+193,ADP_DTM_DIM,Tercero,Naturaleza,varchar,False,Otra,
+194,ADP_DTM_DIM,TipoContrato,SkIdTipoContrato,int,True,PK,
+195,ADP_DTM_DIM,TipoContrato,SkIdEmpresa,smallint,False,FK,Empresa
+196,ADP_DTM_DIM,TipoContrato,Tipo Codigo,varchar,False,Otra,
+197,ADP_DTM_DIM,TipoContrato,Tipo Descripcion,varchar,False,Otra,
+198,ADP_DTM_DIM,TipoContrato,Empresa,varchar,False,Otra,
+199,ADP_DTM_DIM,TipoDeDescuento,SkIdTipoDescuento,int,True,PK,
+200,ADP_DTM_DIM,TipoDeDescuento,Descripcion,varchar,False,Otra,
+201,ADP_DTM_DIM,TiposPolizas,SkIdTipoPoliza,bigint,False,Otra,
+202,ADP_DTM_DIM,TiposPolizas,SkIdEmpresa,smallint,False,FK,Empresa
+203,ADP_DTM_DIM,TiposPolizas,Descripcion,varchar,False,Otra,
+204,ADP_DTM_DIM,Usuario,SkIdUsuario,int,True,PK,
+205,ADP_DTM_DIM,Usuario,SkIdEmpresa,smallint,False,FK,Empresa
+206,ADP_DTM_DIM,Usuario,Nombre,varchar,False,Otra,
+207,ADP_DTM_DIM,Usuario,Cargo,varchar,False,Otra,
+208,ADP_DTM_DIM,Usuario,Nivel Acceso,varchar,False,Otra,
+209,ADP_DTM_DIM,Usuario,Estado,varchar,False,Otra,
+210,ADP_DTM_DIM,Usuario,Empresa,varchar,False,Otra,
+211,ADP_DTM_DIM,VariablesAdicionalesContratos,SkIdVariablesAdicionalesContratos,bigint,True,PK,
+212,ADP_DTM_DIM,VariablesAdicionalesContratos,SkIdEmpresa,smallint,False,FK,Empresa
+213,ADP_DTM_DIM,VariablesAdicionalesContratos,Variable configurada,varchar,False,Otra,
+214,ADP_DTM_DIM,VariablesAdicionalesContratos,Respuesta de variable,varchar,False,Otra,
+215,ADP_DTM_DIM,VariablesAdicionalesContratos,Empresa,varchar,False,Otra,
+216,ADP_DTM_DIM,VariablesAdicionalesProyecto,SkIdVariablesAdicionalesContratos,int,False,FK,VariablesAdicionalesContratos
+217,ADP_DTM_DIM,VariablesAdicionalesProyecto,SkIdEmpresa,smallint,False,FK,Empresa
+218,ADP_DTM_DIM,VariablesAdicionalesProyecto,Variable configurada,varchar,False,Otra,
+219,ADP_DTM_DIM,VariablesAdicionalesProyecto,Respuesta de variable,varchar,False,Otra,
+220,ADP_DTM_DIM,VariablesAdicionalesProyecto,Empresa,varchar,False,Otra,
+221,ADP_DTM_DIM,ZonasProyecto,SkIdZona,bigint,True,PK,
+222,ADP_DTM_DIM,ZonasProyecto,Zona,varchar,False,Otra,
+223,ADP_DTM_DIM,ZonasProyecto,ProyectoDescripcion,varchar,False,Otra,
+224,ADP_DTM_FACT,Acta,SkIdEmpresa,smallint,False,FK,Empresa
+225,ADP_DTM_FACT,Acta,SkIdProyecto,int,False,FK,Proyecto
+226,ADP_DTM_FACT,Acta,SkIdFecha,int,False,FK,Fecha
+227,ADP_DTM_FACT,Acta,SkIdEstado,int,False,FK,EstadoPorDocumento
+228,ADP_DTM_FACT,Acta,SkIdInsumo,bigint,False,FK,Insumo
+229,ADP_DTM_FACT,Acta,SkIdItems,bigint,False,FK,Items
+230,ADP_DTM_FACT,Acta,SkIdEspecificacionActas,bigint,False,FK,EspecificacionDeActas
+231,ADP_DTM_FACT,Acta,SkIdTercero,int,False,FK,Tercero
+232,ADP_DTM_FACT,Acta,Porcentaje Anticipo,smallmoney,False,Otra,
+233,ADP_DTM_FACT,Acta,Valor Anticipo,decimal,False,Otra,
+234,ADP_DTM_FACT,Acta,Porcentaje Retencion Antcipo,smallmoney,False,Otra,
+235,ADP_DTM_FACT,Acta,Valor Retencion Anticipo,decimal,False,Otra,
+236,ADP_DTM_FACT,Acta,Porcentaje Retencion Garantia,smallmoney,False,Otra,
+237,ADP_DTM_FACT,Acta,Valor Retencion Garantias,decimal,False,Otra,
+238,ADP_DTM_FACT,Acta,Valor Descuentos,decimal,False,Otra,
+239,ADP_DTM_FACT,Acta,Valor Total Neto,decimal,False,Otra,
+240,ADP_DTM_FACT,Acta,Valor Iva Total,decimal,False,Otra,
+241,ADP_DTM_FACT,Acta,Valor Total Acta,decimal,False,Otra,
+242,ADP_DTM_FACT,Acta,Cantidad Acta,numeric,False,Otra,
+243,ADP_DTM_FACT,Acta,Valor Unitario,numeric,False,Otra,
+244,ADP_DTM_FACT,Acta,Valor Iva Unitario,numeric,False,Otra,
+245,ADP_DTM_FACT,Acta,Valor Total,numeric,False,Otra,
+246,ADP_DTM_FACT,Acta,No Contrato,int,False,Otra,
+247,ADP_DTM_FACT,Acta,Tipo Acta,varchar,False,Otra,
+248,ADP_DTM_FACT,Acta,No Acta,int,False,Otra,
+249,ADP_DTM_FACT,Acta,Porcentaje Retencion Garantia Fic,numeric,False,Otra,
+250,ADP_DTM_FACT,Acta,Valor Garantias Fic,numeric,False,Otra,
+251,ADP_DTM_FACT,ActasDescuentos,SkIdEmpresa,smallint,False,FK,Empresa
+252,ADP_DTM_FACT,ActasDescuentos,SkIdProyecto,int,False,FK,Proyecto
+253,ADP_DTM_FACT,ActasDescuentos,SkIdTercero,int,False,FK,Tercero
+254,ADP_DTM_FACT,ActasDescuentos,SkIdEspecificacionDeContratos,bigint,False,Otra,
+255,ADP_DTM_FACT,ActasDescuentos,SkIdEspecificacionActas,bigint,False,FK,EspecificacionDeActas
+256,ADP_DTM_FACT,ActasDescuentos,SkIdItems,bigint,False,FK,Items
+257,ADP_DTM_FACT,ActasDescuentos,SkIdInsumo,bigint,False,FK,Insumo
+258,ADP_DTM_FACT,ActasDescuentos,SkIdFecha,int,False,FK,Fecha
+259,ADP_DTM_FACT,ActasDescuentos,SkIdTipoDescuento,int,False,FK,TipoDeDescuento
+260,ADP_DTM_FACT,ActasDescuentos,Valro Descuento,decimal,False,Otra,
+261,ADP_DTM_FACT,ActasDescuentos,Cantidad Descuento,decimal,False,Otra,
+262,ADP_DTM_FACT,ActasDescuentos,Total Descuento,decimal,False,Otra,
+263,ADP_DTM_FACT,Anticipo,SkIdEmpresa,smallint,False,FK,Empresa
+264,ADP_DTM_FACT,Anticipo,SkIdProyecto,int,False,FK,Proyecto
+265,ADP_DTM_FACT,Anticipo,SkIdTercero,int,False,FK,Tercero
+266,ADP_DTM_FACT,Anticipo,SkIdFechaAnticipo,int,False,Otra,
+267,ADP_DTM_FACT,Anticipo,SkIdFechaPago,int,False,Otra,
+268,ADP_DTM_FACT,Anticipo,SkIdUsuario,int,False,FK,Usuario
+269,ADP_DTM_FACT,Anticipo,SkIdEstado,int,False,FK,EstadoPorDocumento
+270,ADP_DTM_FACT,Anticipo,Anticipo Numero,int,False,Otra,
+271,ADP_DTM_FACT,Anticipo,Porcentaje Amortizado,float,False,Otra,
+272,ADP_DTM_FACT,Anticipo,Valor Anticipo,money,False,Otra,
+273,ADP_DTM_FACT,Anticipo,Factura,varchar,False,Otra,
+274,ADP_DTM_FACT,AuditoriaActas,SkIdEmpresa,int,False,FK,Empresa
+275,ADP_DTM_FACT,AuditoriaActas,SkIdProyecto,int,False,FK,Proyecto
+276,ADP_DTM_FACT,AuditoriaActas,SkIdFecha,int,False,FK,Fecha
+277,ADP_DTM_FACT,AuditoriaActas,SkIdUsuario,int,False,FK,Usuario
+278,ADP_DTM_FACT,AuditoriaActas,No. Contrato,int,False,Otra,
+279,ADP_DTM_FACT,AuditoriaActas,No. Acta,int,False,Otra,
+280,ADP_DTM_FACT,AuditoriaActas,Descripcion Estado,varchar,False,Otra,
+281,ADP_DTM_FACT,AuditoriaContratos,SkIdEmpresa,int,False,FK,Empresa
+282,ADP_DTM_FACT,AuditoriaContratos,SkIdProyecto,int,False,FK,Proyecto
+283,ADP_DTM_FACT,AuditoriaContratos,SkIdFecha,int,False,FK,Fecha
+284,ADP_DTM_FACT,AuditoriaContratos,SkIdUsuario,int,False,FK,Usuario
+285,ADP_DTM_FACT,AuditoriaContratos,No. Contrato,int,False,Otra,
+286,ADP_DTM_FACT,AuditoriaContratos,Descripcion Estado,varchar,False,Otra,
+287,ADP_DTM_FACT,AuditoriaEntradasAlmacen,SkIdEmpresa,int,False,FK,Empresa
+288,ADP_DTM_FACT,AuditoriaEntradasAlmacen,SkIdProyecto,int,False,FK,Proyecto
+289,ADP_DTM_FACT,AuditoriaEntradasAlmacen,SkIdFecha,int,False,FK,Fecha
+290,ADP_DTM_FACT,AuditoriaEntradasAlmacen,SkIdUsuario,int,False,FK,Usuario
+291,ADP_DTM_FACT,AuditoriaEntradasAlmacen,No. Entrada,int,False,Otra,
+292,ADP_DTM_FACT,AuditoriaEntradasAlmacen,Descripcion Estado,varchar,False,Otra,
+293,ADP_DTM_FACT,AuditoriaPedidos,SkIdEmpresa,smallint,False,FK,Empresa
+294,ADP_DTM_FACT,AuditoriaPedidos,SkIdProyecto,int,False,FK,Proyecto
+295,ADP_DTM_FACT,AuditoriaPedidos,SkIdPedido,bigint,False,FK,EspecicficacionDePedidos
+296,ADP_DTM_FACT,AuditoriaPedidos,SkIdInsumo,bigint,False,FK,Insumo
+297,ADP_DTM_FACT,AuditoriaPedidos,SkIdFecha,int,False,FK,Fecha
+298,ADP_DTM_FACT,AuditoriaPedidos,SkIdUsuario,int,False,FK,Usuario
+299,ADP_DTM_FACT,AuditoriaPedidos,SkIdEstado,int,False,FK,EstadoPorDocumento
+300,ADP_DTM_FACT,AuditoriaPedidos,EventoPedido,varchar,False,Otra,
+301,ADP_DTM_FACT,Compras,SkIdEmpresa,smallint,False,FK,Empresa
+302,ADP_DTM_FACT,Compras,SkIdProyecto,int,False,FK,Proyecto
+303,ADP_DTM_FACT,Compras,SkIdTercero,int,False,FK,Tercero
+304,ADP_DTM_FACT,Compras,SkIdFechaCompra,int,False,Otra,
+305,ADP_DTM_FACT,Compras,SkIdFechaEntrega,int,False,Otra,
+306,ADP_DTM_FACT,Compras,SkIdFechaCierre,int,False,Otra,
+307,ADP_DTM_FACT,Compras,SkIdEstado,int,False,FK,EstadoPorDocumento
+308,ADP_DTM_FACT,Compras,SkIdInsumo,bigint,False,FK,Insumo
+309,ADP_DTM_FACT,Compras,SkIdItems,bigint,False,FK,Items
+310,ADP_DTM_FACT,Compras,SkIdUsuario,int,False,FK,Usuario
+311,ADP_DTM_FACT,Compras,SkIdOrigenDelDocumento,int,False,FK,OrigenDelDocumento
+312,ADP_DTM_FACT,Compras,SkIdEstadoEnvioDocumento,int,False,FK,EstadoEnvioDocumento
+313,ADP_DTM_FACT,Compras,Compra No,int,False,Otra,
+314,ADP_DTM_FACT,Compras,Cantidad Comprada,decimal,False,Otra,
+315,ADP_DTM_FACT,Compras,Valor Unitario,numeric,False,Otra,
+316,ADP_DTM_FACT,Compras,IVA,money,False,Otra,
+317,ADP_DTM_FACT,Compras,Descuento,money,False,Otra,
+318,ADP_DTM_FACT,Compras,Valor Neto,numeric,False,Otra,
+319,ADP_DTM_FACT,Compras,Valor IVA,numeric,False,Otra,
+320,ADP_DTM_FACT,Compras,Valor Total,numeric,False,Otra,
+321,ADP_DTM_FACT,Contrato,SkIdEmpresa,smallint,False,FK,Empresa
+322,ADP_DTM_FACT,Contrato,Empresa,varchar,False,Otra,
+323,ADP_DTM_FACT,Contrato,SkIdProyecto,int,False,FK,Proyecto
+324,ADP_DTM_FACT,Contrato,SkIdTercero,int,False,FK,Tercero
+325,ADP_DTM_FACT,Contrato,SkIdInsumo,bigint,False,FK,Insumo
+326,ADP_DTM_FACT,Contrato,SkIdItems,bigint,False,FK,Items
+327,ADP_DTM_FACT,Contrato,SkIdTipoContrato,int,False,FK,TipoContrato
+328,ADP_DTM_FACT,Contrato,SKIdEstado,int,False,Otra,
+329,ADP_DTM_FACT,Contrato,SkIdVariablesAdicionalesContratos,bigint,False,FK,VariablesAdicionalesContratos
+330,ADP_DTM_FACT,Contrato,SkIdEspecificacionDeContratos,bigint,False,Otra,
+331,ADP_DTM_FACT,Contrato,Cantidad Inicial,numeric,False,Otra,
+332,ADP_DTM_FACT,Contrato,Cantidad,numeric,False,Otra,
+333,ADP_DTM_FACT,Contrato,Valor Unitario,numeric,False,Otra,
+334,ADP_DTM_FACT,Contrato,Valor Iva,numeric,False,Otra,
+335,ADP_DTM_FACT,Contrato,Valor Total,numeric,False,Otra,
+336,ADP_DTM_FACT,Contrato,Valor Contrato Sin IVA,numeric,False,Otra,
+337,ADP_DTM_FACT,Contrato,Valor Contrato,numeric,False,Otra,
+338,ADP_DTM_FACT,Contrato,Numero De Grupo,int,False,Otra,
+339,ADP_DTM_FACT,Contrato,Valor Detalle,numeric,False,Otra,
+340,ADP_DTM_FACT,Contrato,Valor Detalle Unitario,numeric,False,Otra,
+341,ADP_DTM_FACT,ContratosPolizas,SkIdEmpresa,smallint,False,FK,Empresa
+342,ADP_DTM_FACT,ContratosPolizas,SkIdProyecto,int,False,FK,Proyecto
+343,ADP_DTM_FACT,ContratosPolizas,SkIdContrato,bigint,False,FK,EspecificacionDeContratos
+344,ADP_DTM_FACT,ContratosPolizas,SkIdTercero,int,False,FK,Tercero
+345,ADP_DTM_FACT,ContratosPolizas,SkIdEstado,int,False,FK,EstadoPorDocumento
+346,ADP_DTM_FACT,ContratosPolizas,SkIdFechaVigenciaDesde,int,False,Otra,
+347,ADP_DTM_FACT,ContratosPolizas,SkIdFechaVigenciaHasta,int,False,Otra,
+348,ADP_DTM_FACT,ContratosPolizas,SkIdTipoPoliza,int,False,Otra,
+349,ADP_DTM_FACT,ContratosPolizas,PolizaNumero,varchar,False,Otra,
+350,ADP_DTM_FACT,ContratosPolizas,ValorAsegurado,numeric,False,Otra,
+351,ADP_DTM_FACT,ContratosPolizas,PorcentajeAsegurado,numeric,False,Otra,
+352,ADP_DTM_FACT,ControlProyecto,SkIdEmpresa,smallint,False,FK,Empresa
+353,ADP_DTM_FACT,ControlProyecto,Empresa,varchar,False,Otra,
+354,ADP_DTM_FACT,ControlProyecto,SkIdProyecto,int,False,FK,Proyecto
+355,ADP_DTM_FACT,ControlProyecto,SkIdFecha,int,False,FK,Fecha
+356,ADP_DTM_FACT,ControlProyecto,SkIdClaseOrigen,smallint,False,FK,ControlClaseOrigen
+357,ADP_DTM_FACT,ControlProyecto,SkIdInsumo,bigint,False,FK,Insumo
+358,ADP_DTM_FACT,ControlProyecto,SkIdCapitulo,bigint,False,FK,CapituloPresupuesto
+359,ADP_DTM_FACT,ControlProyecto,SkIdItems,bigint,False,FK,Items
+360,ADP_DTM_FACT,ControlProyecto,Cantidad,numeric,False,Otra,
+361,ADP_DTM_FACT,ControlProyecto,Valor Total,money,False,Otra,
+362,ADP_DTM_FACT,ControlProyecto,Origen Documento,bigint,False,Otra,
+363,ADP_DTM_FACT,ControlProyecto,Origen Documento Detalle,int,False,Otra,
+364,ADP_DTM_FACT,ControlProyecto,Valor Sin IVA,money,False,Otra,
+365,ADP_DTM_FACT,Devoluciones,SkIdEmpresa,smallint,False,FK,Empresa
+366,ADP_DTM_FACT,Devoluciones,SkIdProyecto,int,False,FK,Proyecto
+367,ADP_DTM_FACT,Devoluciones,SkIdTercero,int,False,FK,Tercero
+368,ADP_DTM_FACT,Devoluciones,SkIdInsumo,bigint,False,FK,Insumo
+369,ADP_DTM_FACT,Devoluciones,SkIdFecha,int,False,FK,Fecha
+370,ADP_DTM_FACT,Devoluciones,SkIdEstado,int,False,FK,EstadoPorDocumento
+371,ADP_DTM_FACT,Devoluciones,SkIdBodega,bigint,False,FK,Bodega
+372,ADP_DTM_FACT,Devoluciones,Devolucion Numero,int,False,Otra,
+373,ADP_DTM_FACT,Devoluciones,Remision,varchar,False,Otra,
+374,ADP_DTM_FACT,Devoluciones,Total,money,False,Otra,
+375,ADP_DTM_FACT,Devoluciones,Devolucion Factura,varchar,False,Otra,
+376,ADP_DTM_FACT,Devoluciones,Cantidad Devuelta,int,False,Otra,
+377,ADP_DTM_FACT,Devoluciones,Compra No,int,False,Otra,
+378,ADP_DTM_FACT,EjecucionCliente,SkIdEmpresa,int,False,FK,Empresa
+379,ADP_DTM_FACT,EjecucionCliente,SkIdProyecto,int,False,FK,Proyecto
+380,ADP_DTM_FACT,EjecucionCliente,SkIdFecha,int,False,FK,Fecha
+381,ADP_DTM_FACT,EjecucionCliente,SkIdItems,bigint,False,FK,Items
+382,ADP_DTM_FACT,EjecucionCliente,SkIdCapitulo,bigint,False,FK,CapituloPresupuesto
+383,ADP_DTM_FACT,EjecucionCliente,SkIdEstado,int,False,FK,EstadoPorDocumento
+384,ADP_DTM_FACT,EjecucionCliente,SkIdEspecificacionEjecucionCliente,bigint,False,FK,EspecificacionEjecucionCliente
+385,ADP_DTM_FACT,EjecucionCliente,Valor Garantia,numeric,False,Otra,
+386,ADP_DTM_FACT,EjecucionCliente,Valor Amortizacion,money,False,Otra,
+387,ADP_DTM_FACT,EjecucionCliente,Cantidad Ejecucion Cliente,numeric,False,Otra,
+388,ADP_DTM_FACT,EjecucionCliente,Valor Unitario,numeric,False,Otra,
+389,ADP_DTM_FACT,EjecucionCliente,Valor Total,numeric,False,Otra,
+390,ADP_DTM_FACT,EjecucionEstandar,SkIdEmpresa,int,False,FK,Empresa
+391,ADP_DTM_FACT,EjecucionEstandar,SkIdProyecto,int,False,FK,Proyecto
+392,ADP_DTM_FACT,EjecucionEstandar,SkIdItems,bigint,False,FK,Items
+393,ADP_DTM_FACT,EjecucionEstandar,SkIdCapitulo,bigint,False,FK,CapituloPresupuesto
+394,ADP_DTM_FACT,EjecucionEstandar,SkIdFecha,int,False,FK,Fecha
+395,ADP_DTM_FACT,EjecucionEstandar,SkIdEstado,int,False,FK,EstadoPorDocumento
+396,ADP_DTM_FACT,EjecucionEstandar,Numero Ejecucion,int,False,Otra,
+397,ADP_DTM_FACT,EjecucionEstandar,Cantidad Ejecucion,numeric,False,Otra,
+398,ADP_DTM_FACT,EjecucionEstandar,Valor Unitario,numeric,False,Otra,
+399,ADP_DTM_FACT,EjecucionEstandar,Valor Unitario Presupuesto,numeric,False,Otra,
+400,ADP_DTM_FACT,EjecucionEstandar,Valor Total,numeric,False,Otra,
+401,ADP_DTM_FACT,EntradasAlmacen,SkIdEmpresa,smallint,False,FK,Empresa
+402,ADP_DTM_FACT,EntradasAlmacen,SkIdProyecto,int,False,FK,Proyecto
+403,ADP_DTM_FACT,EntradasAlmacen,SkIdFechaCompra,int,False,Otra,
+404,ADP_DTM_FACT,EntradasAlmacen,SkIdFechaEntrada,int,False,Otra,
+405,ADP_DTM_FACT,EntradasAlmacen,SkIdTercero,int,False,FK,Tercero
+406,ADP_DTM_FACT,EntradasAlmacen,SkIdInsumo,bigint,False,FK,Insumo
+407,ADP_DTM_FACT,EntradasAlmacen,SkIdBodega,bigint,False,FK,Bodega
+408,ADP_DTM_FACT,EntradasAlmacen,SkIdEstadoPorDocumento,int,False,FK,EstadoPorDocumento
+409,ADP_DTM_FACT,EntradasAlmacen,SkIdEspecificacionEntradasAlmacen,bigint,False,FK,EspecificacionDeEntradasAlmacen
+410,ADP_DTM_FACT,EntradasAlmacen,Total Entrada,money,False,Otra,
+411,ADP_DTM_FACT,EntradasAlmacen,Compra Numero,int,False,Otra,
+412,ADP_DTM_FACT,EntradasAlmacen,Compra Total Pagar,decimal,False,Otra,
+413,ADP_DTM_FACT,EntradasAlmacen,Entrada Valor Iva,money,False,Otra,
+414,ADP_DTM_FACT,EntradasAlmacen,Entrada Valor Sin Iva,money,False,Otra,
+415,ADP_DTM_FACT,EntradasAlmacen,Entrada Cantidad,decimal,False,Otra,
+416,ADP_DTM_FACT,EntradasAlmacen,Entrada Valor Amortizado,numeric,False,Otra,
+417,ADP_DTM_FACT,InventarioResumido,SkIdEmpresa,smallint,False,FK,Empresa
+418,ADP_DTM_FACT,InventarioResumido,Empresa,varchar,False,Otra,
+419,ADP_DTM_FACT,InventarioResumido,SkIdFecha,int,False,FK,Fecha
+420,ADP_DTM_FACT,InventarioResumido,SkIdProyecto,int,False,FK,Proyecto
+421,ADP_DTM_FACT,InventarioResumido,SkIdInsumo,bigint,False,FK,Insumo
+422,ADP_DTM_FACT,InventarioResumido,Tipo,varchar,False,Otra,
+423,ADP_DTM_FACT,InventarioResumido,Documento,bigint,False,Otra,
+424,ADP_DTM_FACT,InventarioResumido,Bodega,int,False,Otra,
+425,ADP_DTM_FACT,InventarioResumido,Cantidad,numeric,False,Otra,
+426,ADP_DTM_FACT,InventarioResumido,Unitario Neto,numeric,False,Otra,
+427,ADP_DTM_FACT,InventarioResumido,Valor Iva,numeric,False,Otra,
+428,ADP_DTM_FACT,InventarioResumido,Unitario,numeric,False,Otra,
+429,ADP_DTM_FACT,InventarioResumido,Total,numeric,False,Otra,
+430,ADP_DTM_FACT,NotasEnValor,SkIdEmpresa,smallint,False,FK,Empresa
+431,ADP_DTM_FACT,NotasEnValor,SkIdTercero,int,False,FK,Tercero
+432,ADP_DTM_FACT,NotasEnValor,SkIdProyecto,int,False,FK,Proyecto
+433,ADP_DTM_FACT,NotasEnValor,SkIdFecha,int,False,FK,Fecha
+434,ADP_DTM_FACT,NotasEnValor,SkIdInsumo,int,False,FK,Insumo
+435,ADP_DTM_FACT,NotasEnValor,SkIdEstado,int,False,FK,EstadoPorDocumento
+436,ADP_DTM_FACT,NotasEnValor,Nota Numero,int,False,Otra,
+437,ADP_DTM_FACT,NotasEnValor,Total devolucion,money,False,Otra,
+438,ADP_DTM_FACT,NotasEnValor,Empresa,varchar,False,Otra,
+439,ADP_DTM_FACT,Pedidos,SkIdEmpresa,smallint,False,FK,Empresa
+440,ADP_DTM_FACT,Pedidos,SkIdProyecto,int,False,FK,Proyecto
+441,ADP_DTM_FACT,Pedidos,SkIdCapitulo,bigint,False,FK,CapituloPresupuesto
+442,ADP_DTM_FACT,Pedidos,SkIdPedido,bigint,False,FK,EspecicficacionDePedidos
+443,ADP_DTM_FACT,Pedidos,SkIdItems,bigint,False,FK,Items
+444,ADP_DTM_FACT,Pedidos,SkIdInsumo,bigint,False,FK,Insumo
+445,ADP_DTM_FACT,Pedidos,SkIdFechaPedido,int,False,Otra,
+446,ADP_DTM_FACT,Pedidos,SkIdFechaRequerido,int,False,Otra,
+447,ADP_DTM_FACT,Pedidos,SkIdEstado,int,False,FK,EstadoPorDocumento
+448,ADP_DTM_FACT,Pedidos,Cantidad,numeric,False,Otra,
+449,ADP_DTM_FACT,ProductosProveedorZona,SkIdEmpresa,smallint,False,FK,Empresa
+450,ADP_DTM_FACT,ProductosProveedorZona,SkIdZona,bigint,False,FK,ZonasProyecto
+451,ADP_DTM_FACT,ProductosProveedorZona,SkIdInsumo,int,False,FK,Insumo
+452,ADP_DTM_FACT,ProductosProveedorZona,SkIdTercero,int,False,FK,Tercero
+453,ADP_DTM_FACT,ProductosProveedorZona,SkIdFechaCotizacion,int,False,Otra,
+454,ADP_DTM_FACT,ProductosProveedorZona,SkIdFechaVigencia,int,False,Otra,
+455,ADP_DTM_FACT,ProductosProveedorZona,ValorSinIVA,numeric,False,Otra,
+456,ADP_DTM_FACT,ProductosProveedorZona,PorcentajeDescuento,numeric,False,Otra,
+457,ADP_DTM_FACT,ProductosProveedorZona,IVA,numeric,False,Otra,
+458,ADP_DTM_FACT,ProductosProveedorZona,CantidadMinima,int,False,Otra,
+459,ADP_DTM_FACT,ProductosProveedorZona,DiasMaxmoParaEntrega,int,False,Otra,
+460,ADP_DTM_FACT,ProductosProveedorZona,ProveedorPrincipal,int,False,Otra,
+461,ADP_DTM_FACT,Programacion,SkIdEmpresa,smallint,False,FK,Empresa
+462,ADP_DTM_FACT,Programacion,SkIdProyecto,int,False,FK,Proyecto
+463,ADP_DTM_FACT,Programacion,SkIdActividad,bigint,False,FK,Actividades
+464,ADP_DTM_FACT,Programacion,SkIdFechaInicial,int,False,Otra,
+465,ADP_DTM_FACT,Programacion,SkIdFechaFinal,int,False,Otra,
+466,ADP_DTM_FACT,Programacion,Duracion,int,False,Otra,
+467,ADP_DTM_FACT,Programacion,PorcentajeAsignado,numeric,False,Otra,
+468,ADP_DTM_FACT,Proyeccion,SkIdEmpresa,smallint,False,FK,Empresa
+469,ADP_DTM_FACT,Proyeccion,SkIdProyecto,int,False,FK,Proyecto
+470,ADP_DTM_FACT,Proyeccion,SkIdCapitulo,bigint,False,FK,CapituloPresupuesto
+471,ADP_DTM_FACT,Proyeccion,SkIdItems,bigint,False,FK,Items
+472,ADP_DTM_FACT,Proyeccion,SkIdInsumo,bigint,False,FK,Insumo
+473,ADP_DTM_FACT,Proyeccion,SkIdReforma,int,False,Otra,
+474,ADP_DTM_FACT,Proyeccion,SkIdUsuario,int,False,FK,Usuario
+475,ADP_DTM_FACT,Proyeccion,SkIdFecha,int,False,FK,Fecha
+476,ADP_DTM_FACT,Proyeccion,SkIdFecha Real,int,False,Otra,
+477,ADP_DTM_FACT,Proyeccion,SkIdEstado,int,False,FK,EstadoPorDocumento
+478,ADP_DTM_FACT,Proyeccion,Cantidad,numeric,False,Otra,
+479,ADP_DTM_FACT,Proyeccion,Valor Unitario,money,False,Otra,
+480,ADP_DTM_FACT,Proyeccion,Valor Total,money,False,Otra,
+481,ADP_DTM_FACT,Proyeccion,Origen,varchar,False,Otra,
+482,ADP_DTM_FACT,Proyeccion,Causa,int,False,Otra,
+483,ADP_DTM_FACT,Proyeccion,Cantidad Item,numeric,False,Otra,
+484,ADP_DTM_FACT,Proyeccion,Descripcion Causa,varchar,False,Otra,
+485,ADP_DTM_FACT,Proyeccion,Ajuste Global,tinyint,False,Otra,
+486,ADP_DTM_FACT,Proyeccion,Empresa,varchar,False,Otra,
+487,ADP_DTM_FACT,Reintegro,SkIdEmpresa,smallint,False,FK,Empresa
+488,ADP_DTM_FACT,Reintegro,SkIdProyecto,int,False,FK,Proyecto
+489,ADP_DTM_FACT,Reintegro,SkIdTercero,int,False,FK,Tercero
+490,ADP_DTM_FACT,Reintegro,SkIdFecha,int,False,FK,Fecha
+491,ADP_DTM_FACT,Reintegro,SkIdInsumo,bigint,False,FK,Insumo
+492,ADP_DTM_FACT,Reintegro,SkIdBodega,bigint,False,FK,Bodega
+493,ADP_DTM_FACT,Reintegro,Numero Reintegro,int,False,Otra,
+494,ADP_DTM_FACT,Reintegro,Remision,varchar,False,Otra,
+495,ADP_DTM_FACT,Reintegro,Cantidad,decimal,False,Otra,
+496,ADP_DTM_FACT,Reintegro,Valor Unitario,money,False,Otra,
+497,ADP_DTM_FACT,Reintegro,Valor Total,money,False,Otra,
+498,ADP_DTM_FACT,Reintegro,Empresa,varchar,False,Otra,
+499,ADP_DTM_FACT,SalidasAlmacen,SkIdEmpresa,smallint,False,FK,Empresa
+500,ADP_DTM_FACT,SalidasAlmacen,SkIdProyecto,int,False,FK,Proyecto
+501,ADP_DTM_FACT,SalidasAlmacen,SkIdFechaSalida,int,False,Otra,
+502,ADP_DTM_FACT,SalidasAlmacen,SkIdInsumo,bigint,False,FK,Insumo
+503,ADP_DTM_FACT,SalidasAlmacen,SkIdTercero,int,False,FK,Tercero
+504,ADP_DTM_FACT,SalidasAlmacen,SkIdOrigenDelDocumento,int,False,FK,OrigenDelDocumento
+505,ADP_DTM_FACT,SalidasAlmacen,SkIdEstadoPorDocumento,int,False,FK,EstadoPorDocumento
+506,ADP_DTM_FACT,SalidasAlmacen,SkIdItems,bigint,False,FK,Items
+507,ADP_DTM_FACT,SalidasAlmacen,SkIdBodega,bigint,False,FK,Bodega
+508,ADP_DTM_FACT,SalidasAlmacen,Salida Numero,numeric,False,Otra,
+509,ADP_DTM_FACT,SalidasAlmacen,Salida Remision,varchar,False,Otra,
+510,ADP_DTM_FACT,SalidasAlmacen,Salida Usuario,nvarchar,False,Otra,
+511,ADP_DTM_FACT,SalidasAlmacen,Salida Descuento,varchar,False,Otra,
+512,ADP_DTM_FACT,SalidasAlmacen,Salida Cantidad,numeric,False,Otra,
+513,ADP_DTM_FACT,SalidasAlmacen,Salida Valor Unitario,numeric,False,Otra,
+514,ADP_DTM_FACT,SalidasAlmacen,Salida Valor Total,money,False,Otra,
+515,ADP_DTM_FACT,SalidasAlmacen,Descuentos Cantidad,numeric,False,Otra,
+516,ADP_DTM_FACT,SalidasAlmacen,Empresa,varchar,False,Otra,
+517,ADP_DTM_FACT,Traslados,SkIdEmpresa,smallint,False,FK,Empresa
+518,ADP_DTM_FACT,Traslados,SkIdProyecto Traslado,int,False,Otra,
+519,ADP_DTM_FACT,Traslados,SkIdProyecto Entrada,int,False,Otra,
+520,ADP_DTM_FACT,Traslados,SkIdInsumo,bigint,False,FK,Insumo
+521,ADP_DTM_FACT,Traslados,SkIdFecha,bigint,False,FK,Fecha
+522,ADP_DTM_FACT,Traslados,SkIdEstadoPorDocumento,int,False,FK,EstadoPorDocumento
+523,ADP_DTM_FACT,Traslados,Numero Traslado,bigint,False,Otra,
+524,ADP_DTM_FACT,Traslados,Cantidad Traslado,decimal,False,Otra,
+525,ADP_DTM_FACT,Traslados,Valor Unitario Traslado,money,False,Otra,
+526,ADP_DTM_FACT,Traslados,Valor Total Traslado,money,False,Otra,
+527,ADP_DTM_FACT,Traslados,Numero Entrada Traslado,bigint,False,Otra,
+528,ADP_DTM_FACT,Traslados,Cantidad Entrada Traslado,decimal,False,Otra,
+529,ADP_DTM_FACT,Traslados,Unitario Entrada Traslado,money,False,Otra,
+530,ADP_DTM_FACT,Traslados,Total Entrada Traslado,money,False,Otra,
+531,ADP_DTM_FACT,Traslados,Empresa,varchar,False,Otra,
